@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: trdl
-        image: ramikhreim/trdl:dev-${{ github.run_number }}
+        image: ramikhreim/trdl:TAG_PLACEHOLDER
         ports:
         - containerPort: 3000
 

@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: trdl-application
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/ramikhreim1/EKS-CI-CD-Demo.git'
+    path: '.'  # The Kubernetes manifests are in the root directory
+    targetRevision: HEAD  # You might want to specify a branch name or a tag
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default  # Since the deployment is in the default namespace
+  syncPolicy:
+    automated: {}

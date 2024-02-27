@@ -30,7 +30,7 @@ jobs:
         aws-region: eu-north-1
 
     - name: Update kubeconfig
-      run: aws eks update-kubeconfig --region eu-north-1 --name hilarious-creature-1708950844
+      run: aws eks update-kubeconfig --region eu-north-1 --name unique-sheepdog-1709027055
 
     - name: Set Docker image in Kubernetes deployment
       run: kubectl set image deployment/trdl-deployment trdl=ramikhreim/trdl:dev-${{ github.run_number }}

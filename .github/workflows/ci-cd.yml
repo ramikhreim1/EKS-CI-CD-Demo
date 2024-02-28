@@ -37,4 +37,4 @@ jobs:
         sed -i 's|ramikhreim/trdl:TAG_PLACEHOLDER|ramikhreim/trdl:dev-${{ github.run_number }}|g' k8s/deployment.yml
 
     - name: Deploy to EKS
-      run: kubectl apply -f deployment.yml
+      run: kubectl apply -f k8s/deployment.yml

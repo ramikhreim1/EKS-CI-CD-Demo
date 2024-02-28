@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/ramikhreim1/EKS-CI-CD-Demo.git'
-    path: '.'  # The Kubernetes manifests are in the root directory
+    path: 'k8s'  # Updated to point to the new directory containing Kubernetes manifests
     targetRevision: HEAD  # You might want to specify a branch name or a tag
   destination:
     server: 'https://kubernetes.default.svc'
